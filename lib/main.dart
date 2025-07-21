@@ -67,8 +67,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: 'Cairo', // تطبيق الخط على كل النصوص
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
+            fontWeight: FontWeight.w600,
+          ), // للتأكيد على SemiBold
+        ),
+      ),
+
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
       home: const SplashScreen(),
     );
   }
@@ -90,20 +99,23 @@ class _WebViewAppState extends State<WebViewApp> {
     _controller =
         WebViewController()
           ..setJavaScriptMode(JavaScriptMode.unrestricted)
-          ..loadRequest(Uri.parse('https://shawarmalina.com/'));
+          ..loadRequest(Uri.parse('https://alhejaz-nor.com/'));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 0, 7, 134),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Shawaralina",
-              style: TextStyle(color: Colors.orange, fontSize: 30),
+              "شركة شمال الحجاز للتوظيف",
+              style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontSize: 25,
+              ),
             ),
 
             // Text("Pay ", style: TextStyle(color: Colors.blue, fontSize: 30)),

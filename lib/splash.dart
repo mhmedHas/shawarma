@@ -13,7 +13,7 @@ class _HomeState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Add a delay to simulate a splash screen
-    Future.delayed(const Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 10), () {
       // Navigate to the main page after the delay
       Navigator.of(
         context,
@@ -24,7 +24,7 @@ class _HomeState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: GestureDetector(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -35,18 +35,18 @@ class _HomeState extends State<SplashScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "shawarma",
-                    style: TextStyle(
-                      color: const Color.fromARGB(255, 254, 254, 254),
-                      fontSize: 30,
-                    ),
-                  ),
+                  // Text(
+                  //   "شركة شمال الحجاز للتوظيف",
+                  //   style: TextStyle(
+                  //     color: const Color.fromARGB(255, 16, 1, 150),
+                  //     fontSize: 35,
+                  //   ),
+                  // ),
 
-                  Text(
-                    "lina",
-                    style: TextStyle(color: Colors.orange, fontSize: 30),
-                  ),
+                  // Text(
+                  //   "lina",
+                  //   style: TextStyle(color: Colors.orange, fontSize: 30),
+                  // ),
                 ],
               ),
             ),
@@ -55,7 +55,7 @@ class _HomeState extends State<SplashScreen> {
               child: SizedBox(
                 height: 200,
                 width: 300,
-                child: Image.asset("lib/assets/icon.PNG"),
+                child: Image.asset("lib/assets/icon.jpeg"),
               ),
             ),
             const Spacer(flex: 2),

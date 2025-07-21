@@ -1,35 +1,82 @@
+# name: webapp
+# description: "A new Flutter project."
+# publish_to: 'none' 
+
+# version: 1.0.0+1
+
+# environment:
+#   sdk: ^3.7.0
+
+# dependencies:
+#   flutter:
+#     sdk: flutter
+
+#   cupertino_icons: ^1.0.8
+#   webview_flutter: ^4.10.0
+#   google_fonts: ^6.2.1
+
+# dev_dependencies:
+#   flutter_test:
+#     sdk: flutter
+
+#   flutter_lints: ^5.0.0
+#   flutter_launcher_icons: ^0.14.3
+
+# flutter_launcher_icons:
+#   android: true
+#   ios: true
+#   image_path: "lib/assets/icon.jpeg"  # المسار الذي حددته للأيقونة
+#   adaptive_icon_foreground: "lib/assets/icon.jpeg"  # للأيقونات المتكيفة في أندرويد
+#   adaptive_icon_background: "#ffffff"  # خلفية للأيقونات المتكيفة، يمكنك تغيير اللون
+
+# flutter:
+#   uses-material-design: true
+
+#   assets:
+#     - lib/assets/icon.jpeg
+
 name: webapp
 description: "A new Flutter project."
-publish_to: 'none' 
+publish_to: 'none'  # لا تنشر على pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.7.0
+  sdk: ">=3.7.0 <4.0.0"  # إصدار SDK المطلوب
 
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.8
-  webview_flutter: ^4.10.0
+  cupertino_icons: ^1.0.8  # أيقونات iOS الافتراضية
+  webview_flutter: ^4.10.0  # حزمة WebView
+  google_fonts: ^6.2.1  # لاستخدام خطوط جوجل (اختياري)
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^5.0.0  # تحسينات للكود
+  flutter_launcher_icons: ^0.14.3  # لتخصيص أيقونة التطبيق
 
-  flutter_lints: ^5.0.0
-  flutter_launcher_icons: ^0.14.3
-
+# إعدادات أيقونة التطبيق
 flutter_launcher_icons:
-  android: true
-  ios: true
-  image_path: "lib/assets/icon.PNG"  # المسار الذي حددته للأيقونة
-  adaptive_icon_foreground: "lib/assets/icon.PNG"  # للأيقونات المتكيفة في أندرويد
-  adaptive_icon_background: "#ffffff"  # خلفية للأيقونات المتكيفة، يمكنك تغيير اللون
+  android: true  # تفعيل للأندرويد
+  ios: true  # تفعيل لـ iOS
+  image_path: "lib/assets/icon.jpeg"  # مسار صورة الأيقونة
+  adaptive_icon_foreground: "lib/assets/icon.jpeg"  # أيقونة متكيفة (أندرويد)
+  adaptive_icon_background: "#ffffff"  # خلفية بيضاء للأيقونة المتكيفة
 
+# إعدادات Flutter الأساسية
 flutter:
-  uses-material-design: true
+  uses-material-design: true  # تفعيل تصميم Material
 
+  # الأصول (الخطوط والصور)
   assets:
-    - lib/assets/icon.PNG
+    - lib/assets/icon.jpeg  # صورة الأيقونة
+    - lib/assets/static/Cairo-SemiBold.ttf  # ملف الخط العربي
+
+  # تعريف الخطوط
+  fonts:
+    - family: Cairo  # اسم العائلة المخصص
+      fonts:
+        - asset: lib/assets/static/Cairo-SemiBold.ttf
+          weight: 600  # SemiBold (يمكن استخدام FontWeight.w600 في الكود)

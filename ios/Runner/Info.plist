@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Shawaralina</string> <!-- لاحظ تم التعديل هنا -->
+	<string>شركة شمال الحجاز للتوظيف</string> <!-- لاحظ تم التعديل هنا -->
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
